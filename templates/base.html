@@ -7,6 +7,17 @@
 </div>
 {% endblock %}
 
+<!-- not sure if this is the best way to structure these blocks and error messages -->
+{% block flash_message %}
+<div class="container">
+{% for message in get_flashed_messages() %}
+<div class="alert alert-warning">
+	<button type="button" class="close" data-dismiss="alert">%times</button>
+	{{message}}
+</div>
+{% endfor %}
+{% endblock %}
+
 {% block content %}
   <h1>Test Data</h1>
 {% endblock %}
