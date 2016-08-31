@@ -12,6 +12,9 @@ def create_app():
 
     return app
 
+def random():
+    return 1
+
 app = create_app()
 
 
